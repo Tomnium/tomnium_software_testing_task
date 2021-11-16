@@ -10,7 +10,7 @@ const TextInput = ({input, meta, placeholder}) => {
             fullWidth={true}
             label={placeholder}
             variant="filled"
-            helperText={(meta.submitError || meta.error) && meta.touched ? meta.submitError || meta.error : ''}
+            helperText={meta.error && meta.touched ? meta.error : ''}
             inputProps={{...input}}
             margin="normal"
         />

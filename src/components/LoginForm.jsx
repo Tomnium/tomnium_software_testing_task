@@ -34,15 +34,15 @@ const LoginForm = () => {
 
     return (
         <>
-            <div>
-                Only successful credentials are <code>userEmail@gmail.com</code> and{" "}
-                <code>123456789</code>.
-                <br/><br/>
-            </div>
 
             <Form onSubmit={submitForm}>
                 {({handleSubmit, submitting, hasSubmitErrors, submitError}) => (
                     <form onSubmit={handleSubmit}>
+                        <div className="title">
+                            Only successful credentials are <code>userEmail@gmail.com</code> and{" "}
+                            <code>123456789</code>.
+                            <br/><br/>
+                        </div>
                         <h1>Login form</h1>
                         {hasSubmitErrors ? <h3 style={{color: "red"}}>Email or password incorrect</h3> : undefined}
                         <Field
